@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100">
   <head>
     <title>Copyright Footer</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -13,13 +13,17 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column h-100">
     <header>
       <%= render "layouts/nav" %>
     </header>
 
-    <main class="container p-5">
+    <main class="container p-5 flex-shrink-0">
       <%= yield %>
     </main>
+
+    <footer class="footer mt-auto py-3 bg-light p-5">
+      <%= render partial: "layouts/footer" %>
+    </footer>
   </body>
 </html>
